@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Детские новогодние программы: первая ёлка, встреча с Дедом Морозом, зимний квест и праздник для класса.">
+  <meta name="theme-color" content="#f8f3e8">
+  <meta name="robots" content="noindex">
+  <title>Снежная сказка — новогодние праздники от «Громкого повода»</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body id="top">
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="gromkiy-povod" viewBox="0 0 64 54">
+      <path d="M4 51V13L35 4V15L15 21V41H27V51H4Z" fill="currentColor"/>
+      <path d="M29 15L60 24V51H48V32L40 29V51H28V20L29 15Z" fill="currentColor"/>
+      <path d="M4 51L29 15L21 43L4 51Z" fill="#ff4b31"/>
+    </symbol>
+    <symbol id="snowflake" viewBox="0 0 32 32"><path d="M16 2v28M4 9l24 14M4 23 28 9M11.5 4.5 16 9l4.5-4.5m-9 23L16 23l4.5 4.5M4 14l6-1.5L8.5 6m15 20L22 19.5l6-1.5m-24 0 6 1.5L8.5 26m15-20L22 12.5l6 1.5"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6"/></symbol>
+    <symbol id="chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="tree" viewBox="0 0 24 24"><path d="m12 3-4 5h2l-5 6h3l-5 6h18l-5-6h3l-5-6h2l-4-5Zm0 17v3"/></symbol>
+    <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 2c0 7-3 10-10 10 7 0 10 3 10 10 0-7 3-10 10-10-7 0-10-3-10-10Z"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/><circle cx="9" cy="7" r="4"/></symbol>
+    <symbol id="back" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
+    <symbol id="menu-icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  </svg>
+
+  <a href="#main" class="skip-link">К содержанию</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Громкий повод, на главную">
+        <svg class="brand-mark" aria-hidden="true"><use href="#gromkiy-povod"/></svg>
+        <span>Громкий<br>повод</span>
+      </a>
+      <nav class="header-nav" id="main-nav" aria-label="Навигация">
+        <a href="#programs">Программы</a>
+        <a href="#groups">Для классов и групп</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <a class="button button-outline header-cta" href="#programs" data-picker>Подобрать праздник</a>
+      <button type="button" class="menu-button" aria-label="Открыть меню" aria-controls="main-nav" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#menu-icon"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-picture">
+        <source media="(max-width: 700px)" srcset="assets/hero-mobile.jpg">
+        <img src="assets/hero.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+      </picture>
+      <video class="hero-flight" data-src="assets/hero-sleigh.mp4" preload="none" muted playsinline disablepictureinpicture aria-hidden="true"></video>
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-label"><svg class="icon" aria-hidden="true"><use href="#sparkle"/></svg> Детские новогодние праздники</div>
+          <h1 id="hero-title"><span class="hero-line"><span>Новый год,</span></span> <span class="hero-line"><span>в который верят</span></span></h1>
+          <p>Первая ёлка, встреча с Дедом Морозом или зимний квест. Найдите сказку по возрасту ребёнка.</p>
+          <a class="button button-primary" href="#programs">Выбрать программу <svg class="icon" aria-hidden="true"><use href="#down"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="hero-postcard" aria-hidden="true">
+        <div class="hero-postcard-cover"><svg class="icon"><use href="#snowflake"/></svg></div>
+      </div>
+    </section>
+
+    <div class="container occasion" aria-label="Форматы праздника">
+      <span><svg class="icon" aria-hidden="true"><use href="#tree"/></svg> Ёлки для детей 2–12 лет</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#snowflake"/></svg> Встречи с Дедом Морозом</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#people"/></svg> Семейные и групповые форматы</span>
+    </div>
+
+    <section class="container programs" id="programs" aria-labelledby="programs-title">
+      <header class="section-heading">
+        <div class="heading-ornament" aria-hidden="true"><svg class="icon"><use href="#snowflake"/></svg></div>
+        <h2 id="programs-title">У каждого возраста своя сказка</h2>
+        <p>Выберите возраст, чтобы посмотреть подходящую программу.</p>
+      </header>
+      <div class="filters" role="group" aria-label="Возраст ребёнка">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">Все программы</button>
+        <button class="filter" type="button" data-filter="little" aria-pressed="false">2–4 года</button>
+        <button class="filter" type="button" data-filter="forest" aria-pressed="false">5–7 лет</button>
+        <button class="filter" type="button" data-filter="quest" aria-pressed="false">8–12 лет</button>
+      </div>
+      <p id="filter-status" class="sr-only" role="status"></p>
+      <div class="program-grid">
+        <article class="program" data-program="little">
+          <div class="program-image">
+            <img src="assets/first-tree.jpg" alt="Девочка играет с игрушечным зайцем у ёлки" width="540" height="340" loading="lazy">
+            <span class="age-tag">2–4 года</span>
+          </div>
+          <div class="program-body">
+            <p class="program-type">Игровой спектакль</p>
+            <h3>Моя первая ёлка</h3>
+            <p class="program-description">Дети помогают зайчонку нарядить ёлку, знакомятся с Дедом Морозом и остаются рядом с родителями.</p>
+            <button type="button" class="program-link" data-details="little" aria-label="О программе «Моя первая ёлка»">О программе <span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span></button>
+          </div>
+        </article>
+        <article class="program" data-program="forest">
+          <div class="program-image">
+            <img src="assets/forest.jpg" alt="Дед Мороз и ребёнок держат фонарь в зимнем лесу" width="540" height="340" loading="lazy">
+            <span class="age-tag">5–7 лет</span>
+          </div>
+          <div class="program-body">
+            <p class="program-type">Встреча на улице</p>
+            <h3>Тропой Деда Мороза</h3>
+            <p class="program-description">Дети идут по следам на снегу, находят фонарь и встречают Деда Мороза у ёлки.</p>
+            <button type="button" class="program-link" data-details="forest" aria-label="О программе «Тропой Деда Мороза»">О программе <span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span></button>
+          </div>
+        </article>
+        <article class="program" data-program="quest">
+          <div class="program-image">
+            <img src="assets/quest.jpg" alt="Двое детей разгадывают загадку по карте в мастерской" width="540" height="340" loading="lazy">
+            <span class="age-tag">8–12 лет</span>
+          </div>
+          <div class="program-body">
+            <p class="program-type">Командный квест</p>
+            <h3>Тайна зимней звезды</h3>
+            <p class="program-description">Команда ищет подсказки и разгадывает шифры, чтобы вернуть звезду на верхушку ёлки.</p>
+            <button type="button" class="program-link" data-details="quest" aria-label="О программе «Тайна зимней звезды»">О программе <span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container groups" id="groups" aria-labelledby="groups-title">
+      <div class="group-feature">
+        <div class="group-copy">
+          <svg class="icon group-snowflake" aria-hidden="true"><use href="#snowflake"/></svg>
+          <h2 id="groups-title">Ёлка для всей компании</h2>
+          <p>Для класса, группы детского сада или компании друзей. Укажите возраст и количество детей, чтобы собрать запрос на групповой праздник.</p>
+          <a href="#programs" class="button button-gold" data-picker="group">Подобрать для группы <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        </div>
+        <img src="assets/group.jpg" alt="Дети и Снегурочка водят хоровод у ёлки" width="920" height="630" loading="lazy">
+      </div>
+    </section>
+
+    <section class="container faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq-heading">
+        <svg class="icon" aria-hidden="true"><use href="#sparkle"/></svg>
+        <h2 id="faq-title">Перед праздником</h2>
+      </div>
+      <div class="faq-list">
+        <details name="faq">
+          <summary>Как выбрать программу, если дети разного возраста?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
+          <p>Для первой ёлки ориентируйтесь на младшего ребёнка. Для класса или компании укажите весь диапазон возрастов в запросе.</p>
+        </details>
+        <details name="faq">
+          <summary>Можно ли быть рядом с ребёнком?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
+          <p>В сценарии «Моя первая ёлка» взрослые остаются рядом с малышами. Условия сопровождения для остальных форматов стоит уточнить у организатора.</p>
+        </details>
+        <details name="faq">
+          <summary>Какая программа проходит на улице?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
+          <p>«Тропой Деда Мороза» задумана как прогулка на улице. Для неё понадобятся тёплая одежда и удобная зимняя обувь.</p>
+        </details>
+        <details name="faq">
+          <summary>Когда появятся даты, цены и адреса?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
+          <p>Организатор ещё уточняет расписание, площадки и стоимость. Пока можно посмотреть концепты программ и собрать текст запроса.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#top" aria-label="Громкий повод, на главную"><svg class="brand-mark" aria-hidden="true"><use href="#gromkiy-povod"/></svg><span>Громкий<br>повод</span></a>
+      <p>«Снежная сказка». Концепт новогодних программ</p>
+      <a class="back-top" href="#top">Наверх <svg class="icon" aria-hidden="true"><use href="#down"/></svg></a>
+    </div>
+  </footer>
+
+  <dialog id="holiday-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <button type="button" class="dialog-close" aria-label="Закрыть"><svg class="icon" aria-hidden="true"><use href="#back"/></svg></button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <template id="details-template">
+    <p class="dialog-kicker" data-slot="type"></p>
+    <h2 id="dialog-title" tabindex="-1" data-slot="title"></h2>
+    <p class="dialog-description" data-slot="description"></p>
+    <ul class="detail-list" data-slot="activities"></ul>
+    <button class="button button-primary" type="button" data-open-request>Собрать запрос <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
+  </template>
+  <template id="formats-template">
+    <h2 id="dialog-title" tabindex="-1">Выберите формат</h2>
+    <ul class="format-options"></ul>
+  </template>
+  <template id="format-choice-template">
+    <li>
+      <button type="button" class="format-choice">
+        <span class="format-choice-copy">
+          <span data-slot="title"></span>
+          <span class="format-choice-age" data-slot="age"></span>
+        </span>
+        <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+      </button>
+    </li>
+  </template>
+  <template id="picker-template">
+    <h2 id="dialog-title" tabindex="-1">Подобрать праздник</h2>
+    <form id="holiday-form">
+      <input type="hidden" name="format">
+      <div class="format-summary">
+        <div>
+          <p>Формат</p>
+          <strong data-selected-format></strong>
+        </div>
+        <button type="button" class="format-edit" data-change-format aria-label="Изменить формат">Изменить</button>
+      </div>
+      <label class="dialog-field">
+        <span>Возраст детей</span>
+        <input type="text" name="age" placeholder="Например, 5–7 лет" maxlength="40" required>
+      </label>
+      <label class="dialog-field">
+        <span>Сколько детей</span>
+        <input type="number" name="count" min="1" max="999" value="1" required>
+      </label>
+      <label class="dialog-field">
+        <span class="dialog-field-label">Желаемая дата <span class="optional">по желанию</span></span>
+        <input type="date" name="date">
+      </label>
+      <button class="button button-primary" type="submit">Собрать запрос</button>
+    </form>
+  </template>
+  <template id="result-template">
+    <h2 id="dialog-title" tabindex="-1">Текст запроса готов</h2>
+    <p class="dialog-description">Скопируйте текст для переписки с организатором. Он хранится в этом окне.</p>
+    <textarea class="request-result" aria-label="Текст запроса" readonly rows="6"></textarea>
+    <div class="result-actions">
+      <button class="button button-primary" type="button" data-copy>Скопировать текст</button>
+      <button class="button button-outline" type="button" data-edit>Изменить</button>
+    </div>
+    <p class="copy-status" role="status"></p>
+  </template>
+</body>
+</html>
