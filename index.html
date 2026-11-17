@@ -8,8 +8,8 @@
   <meta name="robots" content="noindex">
   <title>Снежная сказка — новогодние праздники от «Громкого повода»</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261117">
+  <script src="site.js?v=20261117" defer></script>
 </head>
 <body id="top">
   <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -82,13 +82,13 @@
       </header>
       <div class="filters" role="group" aria-label="Возраст ребёнка">
         <button class="filter" type="button" data-filter="all" aria-pressed="true">Все программы</button>
-        <button class="filter" type="button" data-filter="little" aria-pressed="false">2–4 года</button>
-        <button class="filter" type="button" data-filter="forest" aria-pressed="false">5–7 лет</button>
-        <button class="filter" type="button" data-filter="quest" aria-pressed="false">8–12 лет</button>
+        <button class="filter" type="button" data-filter="2-4" aria-pressed="false">2–4 года</button>
+        <button class="filter" type="button" data-filter="5-7" aria-pressed="false">5–7 лет</button>
+        <button class="filter" type="button" data-filter="8-12" aria-pressed="false">8–12 лет</button>
       </div>
       <p id="filter-status" class="sr-only" role="status"></p>
       <div class="program-grid">
-        <article class="program" data-program="little">
+        <article class="program" data-program="little" data-ages="2-4">
           <div class="program-image">
             <img src="assets/first-tree.jpg" alt="Девочка играет с игрушечным зайцем у ёлки" width="540" height="340" loading="lazy">
             <span class="age-tag">2–4 года</span>
@@ -100,19 +100,20 @@
             <button type="button" class="program-link" data-details="little" aria-label="О программе «Моя первая ёлка»">О программе <span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span></button>
           </div>
         </article>
-        <article class="program" data-program="forest">
+        <article class="program" data-program="forest" data-ages="4-12">
           <div class="program-image">
             <img src="assets/forest.jpg" alt="Дед Мороз и ребёнок держат фонарь в зимнем лесу" width="540" height="340" loading="lazy">
-            <span class="age-tag">5–7 лет</span>
+            <span class="age-tag">4–12 лет</span>
           </div>
           <div class="program-body">
-            <p class="program-type">Встреча на улице</p>
-            <h3>Тропой Деда Мороза</h3>
-            <p class="program-description">Дети идут по следам на снегу, находят фонарь и встречают Деда Мороза у ёлки.</p>
-            <button type="button" class="program-link" data-details="forest" aria-label="О программе «Тропой Деда Мороза»">О программе <span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span></button>
+            <p class="program-type">На природе · 45–60 минут</p>
+            <h3>Чудо в зимнем лесу</h3>
+            <p class="program-description">Неожиданная встреча с Дедом Морозом у живой ёлки. В программе игры на снегу, подарки и семейные фото.</p>
+            <p class="program-price">За ребёнка в сборной группе<br><strong>1&nbsp;500&nbsp;₽</strong> до 1 декабря 2026<br><strong>1&nbsp;800&nbsp;₽</strong> с 1 декабря 2026</p>
+            <button type="button" class="program-link" data-details="forest" aria-label="О программе «Чудо в зимнем лесу»">О программе <span><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></span></button>
           </div>
         </article>
-        <article class="program" data-program="quest">
+        <article class="program" data-program="quest" data-ages="8-12">
           <div class="program-image">
             <img src="assets/quest.jpg" alt="Двое детей разгадывают загадку по карте в мастерской" width="540" height="340" loading="lazy">
             <span class="age-tag">8–12 лет</span>
@@ -151,15 +152,15 @@
         </details>
         <details name="faq">
           <summary>Можно ли быть рядом с ребёнком?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
-          <p>В сценарии «Моя первая ёлка» взрослые остаются рядом с малышами. Условия сопровождения для остальных форматов стоит уточнить у организатора.</p>
+          <p>На «Моей первой ёлке» взрослые остаются рядом с малышами. На программе «Чудо в зимнем лесу» родители идут с детьми на прогулку и могут сделать семейное фото с Дедом Морозом.</p>
         </details>
         <details name="faq">
           <summary>Какая программа проходит на улице?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
-          <p>«Тропой Деда Мороза» задумана как прогулка на улице. Для неё понадобятся тёплая одежда и удобная зимняя обувь.</p>
+          <p>«Чудо в зимнем лесу» проходит на природе у живой ёлки. Возьмите тёплую одежду и удобную зимнюю обувь.</p>
         </details>
         <details name="faq">
-          <summary>Когда появятся даты, цены и адреса?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
-          <p>Организатор ещё уточняет расписание, площадки и стоимость. Пока можно посмотреть концепты программ и собрать текст запроса.</p>
+          <summary>Где узнать даты, цены и адреса?<svg class="icon" aria-hidden="true"><use href="#chevron"/></svg></summary>
+          <p>Стоимость «Чуда в зимнем лесу» указана в карточке программы. Свободные даты, место встречи и стоимость остальных программ можно уточнить у организатора.</p>
         </details>
       </div>
     </section>
@@ -185,6 +186,53 @@
     <h2 id="dialog-title" tabindex="-1" data-slot="title"></h2>
     <p class="dialog-description" data-slot="description"></p>
     <ul class="detail-list" data-slot="activities"></ul>
+    <button class="button button-primary" type="button" data-open-request>Собрать запрос <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
+  </template>
+  <template id="forest-details-template">
+    <p class="dialog-kicker">4–12 лет · 45–60 минут · на природе</p>
+    <h2 id="dialog-title" tabindex="-1" data-slot="title"></h2>
+    <p class="dialog-description">Праздник у живой ёлки с Дедом Морозом. Всю программу сопровождает новогодняя музыка.</p>
+    <div class="event-note">
+      <h3>Стоимость в сборной группе</h3>
+      <p><strong>1&nbsp;500&nbsp;₽</strong> за ребёнка до 1 декабря 2026 года.<br><strong>1&nbsp;800&nbsp;₽</strong> за ребёнка с 1 декабря 2026 года.</p>
+    </div>
+    <div class="event-note">
+      <h3>Как передать подарки</h3>
+      <p>За 15–20 минут до начала незаметно передайте подарки Деду Морозу. Он спрячет их в большой мешок. Каждый подарок удобно положить в непрозрачный пакет и крупно подписать именем ребёнка.</p>
+    </div>
+    <h3 class="event-schedule-title">Как проходит праздник</h3>
+    <ol class="event-schedule">
+      <li>
+        <span class="event-time">00:00–00:10 · 10 минут</span>
+        <h4>Неожиданная встреча</h4>
+        <p>Родители зовут детей на обычную прогулку по зимнему лесу: поискать шишки для поделки или посмотреть, кто оставил следы на снегу. У нарядной ёлки ребята замечают большой красный мешок. Из-за деревьев выходит Дед Мороз, напевает песню и огорчённо ищет дорогу.</p>
+        <p>«Ого, сколько здесь ребят! А я заблудился в зимнем лесу, шёл к вам на праздник, да тропинку потерял. Вы мне поможете?» Дед Мороз выслушивает детей, здоровается и предлагает согреться в игре.</p>
+      </li>
+      <li>
+        <span class="event-time">00:10–00:30 · 20 минут</span>
+        <h4>Лесная разминка и игры</h4>
+        <ul>
+          <li><strong>«Заморожу».</strong> Дед Мороз тянется к носам, рукам и ушам, а дети успевают их спрятать.</li>
+          <li><strong>«Сугробы и тропинки».</strong> На «Сугроб!» дети приседают в снег, на «Тропинка!» выстраиваются друг за другом и идут змейкой.</li>
+          <li><strong>«Снежный ком».</strong> Дети передают мягкий снежок по кругу под музыку или считалочку. Тот, у кого он остался в руках, называет любимое зимнее блюдо или мультик.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="event-time">00:30–00:45 · 15 минут</span>
+        <h4>Стихи и подарки</h4>
+        <p>Дед Мороз садится на подготовленный пень. Дети по желанию рассказывают стихи, показывают небольшой танец или говорят «спасибо за зиму». Дед Мороз находит имена в списке или на пакетах и вручает каждому ребёнку подарок из мешка.</p>
+      </li>
+      <li>
+        <span class="event-time">00:45–00:55 · 10 минут</span>
+        <h4>Фотосессия и прощание</h4>
+        <p>Сначала общее фото с Дедом Морозом у лесной ёлки, затем семейные кадры. Дед Мороз говорит, что его ждут другие ребята, и уходит по подготовленной тропинке.</p>
+      </li>
+      <li>
+        <span class="event-time">00:55–01:00 · 5 минут</span>
+        <h4>Резервное время</h4>
+        <p>Дети делятся впечатлениями с родителями, рассматривают подарки и пьют тёплый чай из термоса, который взрослые могут взять с собой.</p>
+      </li>
+    </ol>
     <button class="button button-primary" type="button" data-open-request>Собрать запрос <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
   </template>
   <template id="formats-template">

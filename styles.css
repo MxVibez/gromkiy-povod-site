@@ -137,6 +137,8 @@ h1, h2, h3 { text-wrap: balance; }
 .program-type { color: var(--wine); font-size: 12px; font-weight: 850; }
 .program h3 { margin-top: 5px; font-size: clamp(1.72rem, 2.75vw, 2.5rem); line-height: 1.06; letter-spacing: -.05em; text-wrap: wrap; }
 .program-description { margin-block: 11px 14px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.program-price { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.program-price strong { color: var(--wine); }
 .program-link { margin-top: auto; background: transparent; border: 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; padding: 8px 0 0; min-height: 49px; font-size: 13px; font-weight: 800; }
 .program-link span { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #d4c4a7; display: grid; place-items: center; transition: color .2s ease, background-color .2s ease; }
 .program-link:hover { color: var(--wine); }
@@ -209,6 +211,16 @@ dialog :focus-visible { outline-color: var(--gold); outline-offset: 2px; }
 .dialog-description { color: var(--panel-muted); margin: 7px 0 18px; font-size: 14px; line-height: 1.5; }
 .detail-list { padding-left: 20px; margin: 0 0 20px; font-size: 14px; }
 .detail-list li + li { margin-top: 5px; }
+.event-note { margin-bottom: 12px; padding: 12px 14px; border-radius: 12px; background: var(--field); }
+.event-note h3, .event-schedule-title, .event-schedule h4 { font: 750 15px/1.4 var(--body); }
+.event-note p, .event-schedule p, .event-schedule ul { margin-top: 5px; color: var(--panel-muted); font-size: 14px; line-height: 1.55; }
+.event-note strong, .event-schedule strong { color: var(--panel-text); }
+.event-schedule-title { margin-top: 20px; }
+.event-schedule { margin: 9px 0 20px; padding: 0; list-style: none; }
+.event-schedule > li { padding-block: 11px; border-top: 1px solid #485e53; }
+.event-schedule ul { padding-left: 18px; }
+.event-schedule ul li + li { margin-top: 5px; }
+.event-time { display: block; margin-bottom: 3px; color: var(--gold); font-size: 12px; font-weight: 750; }
 .format-options {
   margin: 17px 0 0;
   padding: 0;

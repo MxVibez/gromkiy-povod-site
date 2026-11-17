@@ -7,11 +7,9 @@ const programs = {
     activities: ['Игры с зайчонком и ёлочными игрушками', 'Хоровод с простыми движениями', 'Родители рядом с детьми'],
   },
   forest: {
-    title: 'Тропой Деда Мороза',
-    age: '5–7 лет',
-    type: 'встреча на улице',
-    description: 'На снегу виднеются большие следы. Они ведут к ёлке, где детей ждёт Дед Мороз. По дороге ребята ищут подсказки и помогают зажечь огоньки.',
-    activities: ['Зимняя прогулка по следам и подсказкам', 'Встреча с Дедом Морозом у ёлки', 'Нужна тёплая одежда и зимняя обувь'],
+    title: 'Чудо в зимнем лесу — неожиданная встреча с Дедом Морозом',
+    age: '4–12 лет',
+    detailTemplate: 'forest-details',
   },
   quest: {
     title: 'Тайна зимней звезды',
@@ -56,22 +54,25 @@ const filterAnimations = new Map();
 for (const button of filters) {
   button.addEventListener('click', () => {
     if (button.getAttribute('aria-pressed') === 'true') return;
-    const filter = button.dataset.filter;
+    const showAll = button.dataset.filter === 'all';
+    const [minAge, maxAge] = button.dataset.filter.split('-').map(Number);
     for (const option of filters) option.setAttribute('aria-pressed', String(option === button));
     for (const [index, card] of cards.entries()) {
       filterAnimations.get(card)?.cancel();
       filterAnimations.delete(card);
-      card.hidden = filter !== 'all' && filter !== card.dataset.program;
+      const [programMinAge, programMaxAge] = card.dataset.ages.split('-').map(Number);
+      card.hidden = !showAll && (programMinAge > maxAge || programMaxAge < minAge);
       if (!card.hidden && !reduceMotion.matches) {
         const animation = card.animate(
           [{ opacity: .65, transform: 'translateY(9px)' }, { opacity: 1, transform: 'translateY(0)' }],
-          { duration: 260, delay: filter === 'all' ? index * 35 : 0, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' },
+          { duration: 260, delay: showAll ? index * 35 : 0, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' },
         );
         filterAnimations.set(card, animation);
         animation.onfinish = () => filterAnimations.delete(card);
       }
     }
-    filterStatus.textContent = filter === 'all' ? 'Показаны все три программы' : `Подходящая программа: ${programs[filter].title}`;
+    const visibleTitles = cards.filter(card => !card.hidden).map(card => card.querySelector('h3').textContent);
+    filterStatus.textContent = `Программы для выбранного возраста: ${visibleTitles.join(', ')}`;
   });
 }
 
@@ -114,16 +115,17 @@ function focusDialog() {
 
 function showDetails(id) {
   const program = programs[id];
-  renderDialog('details');
-  for (const field of ['title', 'description']) {
-    content.querySelector(`[data-slot="${field}"]`).textContent = program[field];
-  }
-  content.querySelector('[data-slot="type"]').textContent = `${program.age} · ${program.type}`;
-  const activities = content.querySelector('[data-slot="activities"]');
-  for (const activity of program.activities) {
-    const item = document.createElement('li');
-    item.textContent = activity;
-    activities.append(item);
+  renderDialog(program.detailTemplate ?? 'details');
+  content.querySelector('[data-slot="title"]').textContent = program.title;
+  if (!program.detailTemplate) {
+    content.querySelector('[data-slot="description"]').textContent = program.description;
+    content.querySelector('[data-slot="type"]').textContent = `${program.age} · ${program.type}`;
+    const activities = content.querySelector('[data-slot="activities"]');
+    for (const activity of program.activities) {
+      const item = document.createElement('li');
+      item.textContent = activity;
+      activities.append(item);
+    }
   }
   content.querySelector('[data-open-request]').addEventListener('click', () => showPicker({ format: id }));
   focusDialog();
@@ -180,7 +182,9 @@ function showResult(values) {
     `Возраст детей: ${values.age.trim()}`,
     `Количество детей: ${values.count}`,
     `Желаемая дата: ${date}`,
-    'Подскажите, пожалуйста, свободные даты, адрес и стоимость.',
+    values.format === 'forest'
+      ? 'Подскажите, пожалуйста, свободные даты и место встречи.'
+      : 'Подскажите, пожалуйста, свободные даты, адрес и стоимость.',
   ].join('\n');
   const result = content.querySelector('textarea');
   const status = content.querySelector('.copy-status');
