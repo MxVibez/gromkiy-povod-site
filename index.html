@@ -8,8 +8,8 @@
   <meta name="robots" content="noindex">
   <title>Чудо в зимнем лесу — неожиданная встреча с Дедом Морозом | Громкий повод</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261117-2">
-  <script src="site.js?v=20261117-2" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261117-3">
+  <script src="site.js?v=20261117-3" defer></script>
 </head>
 <body id="top">
   <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -25,7 +25,6 @@
     <symbol id="tree" viewBox="0 0 24 24"><path d="m12 3-4 5h2l-5 6h3l-5 6h18l-5-6h3l-5-6h2l-4-5Zm0 17v3"/></symbol>
     <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 2c0 7-3 10-10 10 7 0 10 3 10 10 0-7 3-10 10-10-7 0-10-3-10-10Z"/></symbol>
     <symbol id="people" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m20 0v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/><circle cx="9" cy="7" r="4"/></symbol>
-    <symbol id="back" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></symbol>
     <symbol id="menu-icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
   </svg>
 
@@ -41,7 +40,7 @@
         <a href="#gifts">Подготовка</a>
         <a href="#price">Стоимость</a>
       </nav>
-      <a class="button button-outline header-cta" href="#price" data-picker>Собрать запрос</a>
+      <a class="button button-outline header-cta" href="tel:+79029470437">Связаться для бронирования праздника</a>
       <button type="button" class="menu-button" aria-label="Открыть меню" aria-controls="main-nav" aria-expanded="false"><svg class="icon" aria-hidden="true"><use href="#menu-icon"/></svg></button>
     </div>
   </header>
@@ -89,7 +88,7 @@
             <div><dt>До 1 декабря 2026 года</dt><dd>1&nbsp;500&nbsp;₽</dd></div>
             <div><dt>С 1 декабря 2026 года</dt><dd>1&nbsp;800&nbsp;₽</dd></div>
           </dl>
-          <button class="button button-gold" type="button" data-picker>Собрать запрос</button>
+          <a class="button button-gold" href="tel:+79029470437">Связаться для бронирования праздника</a>
         </section>
       </div>
 
@@ -158,41 +157,5 @@
     </div>
   </footer>
 
-  <dialog id="holiday-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-inner">
-      <button type="button" class="dialog-close" aria-label="Закрыть"><svg class="icon" aria-hidden="true"><use href="#back"/></svg></button>
-      <div id="dialog-content"></div>
-    </div>
-  </dialog>
-
-  <template id="picker-template">
-    <h2 id="dialog-title" tabindex="-1">Собрать запрос</h2>
-    <p class="dialog-description">Чудо в зимнем лесу — неожиданная встреча с Дедом Морозом</p>
-    <form id="holiday-form">
-      <label class="dialog-field">
-        <span>Возраст детей</span>
-        <input type="text" name="age" placeholder="Например, 5–7 лет" maxlength="40" required>
-      </label>
-      <label class="dialog-field">
-        <span>Сколько детей</span>
-        <input type="number" name="count" min="1" max="999" value="1" required>
-      </label>
-      <label class="dialog-field">
-        <span class="dialog-field-label">Желаемая дата <span class="optional">по желанию</span></span>
-        <input type="date" name="date">
-      </label>
-      <button class="button button-primary" type="submit">Собрать запрос</button>
-    </form>
-  </template>
-  <template id="result-template">
-    <h2 id="dialog-title" tabindex="-1">Текст запроса готов</h2>
-    <p class="dialog-description">Скопируйте текст для переписки с организатором. Он хранится в этом окне.</p>
-    <textarea class="request-result" aria-label="Текст запроса" readonly rows="6"></textarea>
-    <div class="result-actions">
-      <button class="button button-primary" type="button" data-copy>Скопировать текст</button>
-      <button class="button button-outline" type="button" data-edit>Изменить</button>
-    </div>
-    <p class="copy-status" role="status"></p>
-  </template>
 </body>
 </html>
