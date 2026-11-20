@@ -128,13 +128,12 @@ h1, h2, h3 { text-wrap: balance; }
 .event-price .button { width: 100%; }
 .event-story { margin-top: clamp(32px, 6vw, 74px); }
 .event-schedule { max-width: 900px; margin: 22px 0 0; padding: 0; list-style: none; }
-.event-schedule > li { display: grid; grid-template-columns: minmax(125px, .34fr) minmax(0, 1fr); gap: 8px clamp(16px, 3vw, 36px); padding-block: 18px; border-top: 1px solid var(--line); }
+.event-schedule > li { padding-block: 18px; border-top: 1px solid var(--line); }
 .event-schedule h3 { font-size: clamp(1.55rem, 2.7vw, 2.1rem); line-height: 1.15; text-wrap: pretty; }
 .event-schedule p, .event-schedule ul, .event-schedule blockquote { margin: 7px 0 0; }
 .event-schedule ul { padding-left: 19px; }
 .event-schedule ul li + li { margin-top: 5px; }
 .event-schedule blockquote { border-inline-start: 2px solid var(--gold); padding-inline-start: 12px; color: var(--muted); }
-.event-time { padding-block-start: 4px; color: var(--wine); font-size: 13px; font-weight: 800; }
 
 .site-footer { background: var(--forest); color: #fcf2dc; }
 .footer-inner { min-height: 102px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -245,7 +244,7 @@ h1, h2, h3 { text-wrap: balance; }
   .occasion { min-height: 66px; display: flex; justify-content: space-around; }
   .occasion span { width: 33.333%; min-height: 46px; gap: 5px; padding: 4px 6px; flex-direction: column; text-align: center; font-size: 10px; line-height: 1.25; }
   .occasion .icon { width: 17px; height: 17px; }
-  .event-intro, .event-schedule > li { grid-template-columns: 1fr; }
+  .event-intro { grid-template-columns: 1fr; }
   .footer-inner { flex-wrap: wrap; gap: 7px 14px; padding-block: 15px; }
 }
 @media (max-width: 480px) {
